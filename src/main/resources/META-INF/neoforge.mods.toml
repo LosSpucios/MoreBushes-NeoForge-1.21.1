@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="All rights reserved"
+
+[[mods]]
+modId="morebushes"
+version="2.0.0"
+displayName="More Bushes"
+authors="Spucio"
+description='''More Bushes mod for NeoForge 1.21.1'''
+
+[[dependencies.morebushes]]
+modId="neoforge"
+type="required"
+versionRange="[21,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.morebushes]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,)"
+ordering="NONE"
+side="BOTH"

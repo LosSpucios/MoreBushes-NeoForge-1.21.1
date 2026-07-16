@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:potion" },
+    { "item": "morebushes:shulker_berries" },
+    { "item": "morebushes:shulker_berries" },
+    { "item": "morebushes:shulker_berries" },
+    { "item": "morebushes:shulker_berries" },
+    { "item": "morebushes:shulker_berries" },
+    { "item": "morebushes:shulker_berries" },
+    { "item": "morebushes:shulker_berries" },
+    { "item": "morebushes:shulker_berries" }
+  ],
+  "result": {
+    "id": "morebushes:shulker_berry_juice",
+    "count": 1
+  }
+}

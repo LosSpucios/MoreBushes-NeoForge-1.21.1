@@ -1,0 +1,10 @@
+{
+  "feature": "morebushes:shulker_berry_bush",
+  "placement": [
+    { "type": "minecraft:in_square" },
+    { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" },
+    { "type": "minecraft:biome" },
+    { "type": "minecraft:count", "count": 1 },
+    { "type": "minecraft:rarity_filter", "chance": 18 }
+  ]
+}

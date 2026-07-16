@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "morebushes:item/lava_berry_juice"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:potion" },
+    { "item": "morebushes:golden_berries" },
+    { "item": "morebushes:golden_berries" },
+    { "item": "morebushes:golden_berries" },
+    { "item": "morebushes:golden_berries" }
+  ],
+  "result": {
+    "id": "morebushes:golden_berry_juice",
+    "count": 1
+  }
+}

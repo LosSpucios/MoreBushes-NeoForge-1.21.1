@@ -1,0 +1,27 @@
+{
+  "item.morebushes.blueberries": "Blue Berries",
+  "item.morebushes.lava_berries": "Lava Berries",
+  "item.morebushes.golden_berries": "Golden Berries",
+  "item.morebushes.glowstone_berries": "Glowstone Berries",
+  "item.morebushes.miners_berries": "Miner's Berries",
+  "item.morebushes.shulker_berries": "Shulker Berries",
+  "item.morebushes.chorus_berries": "Chorus Berries",
+
+  "item.morebushes.sweet_berry_juice": "Sweet Berry Juice",
+  "item.morebushes.blueberry_juice": "Blue Berry Juice",
+  "item.morebushes.lava_berry_juice": "Lava Berry Juice",
+  "item.morebushes.golden_berry_juice": "Golden Berry Juice",
+  "item.morebushes.glowstone_berry_juice": "Glowstone Berry Juice",
+  "item.morebushes.miners_berry_juice": "Miner's Berry Juice",
+  "item.morebushes.shulker_berry_juice": "Shulker Berry Juice",
+  "item.morebushes.chorus_berry_juice": "Chorus Berry Juice",
+  "item.morebushes.berry_juice": "Empty Berry Juice",
+
+  "block.morebushes.blue_berry_bush": "Blue Berry Bush",
+  "block.morebushes.lava_berry_bush": "Lava Berry Bush",
+  "block.morebushes.glowstone_berry_bush": "Glowstone Berry Bush",
+  "block.morebushes.miners_berry_bush": "Miner's Berry Bush",
+  "block.morebushes.shulker_berry_bush": "Shulker Berry Bush",
+  "block.morebushes.chorus_berry_bush": "Chorus Berry Bush",
+  "block.morebushes.golden_berry_bush": "Golden Berry Bush"
+}

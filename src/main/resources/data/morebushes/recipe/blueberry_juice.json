@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:potion" },
+    { "item": "morebushes:blueberries" },
+    { "item": "morebushes:blueberries" },
+    { "item": "morebushes:blueberries" },
+    { "item": "morebushes:blueberries" },
+    { "item": "morebushes:blueberries" },
+    { "item": "morebushes:blueberries" },
+    { "item": "morebushes:blueberries" },
+    { "item": "morebushes:blueberries" }
+  ],
+  "result": {
+    "id": "morebushes:blueberry_juice",
+    "count": 1
+  }
+}
