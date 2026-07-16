@@ -12,7 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.spucio.morebushes.item.JuiceItem;
-import net.minecraft.world.level.Level; // TO JEST WŁAŚCIWY IMPORT
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -50,28 +50,33 @@ public class ModItems {
 
                 @Override
                 public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entityLiving) {
-                    ItemStack itemstack = super.finishUsingItem(stack, level, entityLiving);
+                    ItemStack result = super.finishUsingItem(stack, level, entityLiving);
 
                     if (!level.isClientSide) {
-                        for(int i = 0; i < 8; ++i) {
-                            double d0 = entityLiving.getX() + (entityLiving.getRandom().nextDouble() - 0.5D) * 8.0D;
-                            double d1 = Mth.clamp(entityLiving.getY() + (double)(entityLiving.getRandom().nextInt(8) - 8), (double)level.getMinBuildHeight(), (double)(level.getMinBuildHeight() + ((ServerLevel)level).getLogicalHeight() - 1));
-                            double d2 = entityLiving.getZ() + (entityLiving.getRandom().nextDouble() - 0.5D) * 8.0D;
+                        double startX = entityLiving.getX();
+                        double startY = entityLiving.getY();
+                        double startZ = entityLiving.getZ();
+
+                        for (int i = 0; i < 16; ++i) {
+                            double d3 = entityLiving.getX() + (entityLiving.getRandom().nextDouble() - 0.5D) * 32.0D;
+                            double d4 = Math.min(Math.max(entityLiving.getY() + (double) (entityLiving.getRandom().nextInt(32) - 16),
+                                    (double) level.getMinBuildHeight()), (double) (level.getHeight() - 1 + level.getMinBuildHeight()));
+                            double d5 = entityLiving.getZ() + (entityLiving.getRandom().nextDouble() - 0.5D) * 32.0D;
 
                             if (entityLiving.isPassenger()) {
                                 entityLiving.stopRiding();
                             }
 
-                            if (entityLiving.randomTeleport(d0, d1, d2, true)) {
-                                level.gameEvent(GameEvent.TELEPORT, entityLiving.position(), GameEvent.Context.of(entityLiving));
-                                level.playSound(null, entityLiving.getX(), entityLiving.getY(), entityLiving.getZ(),
-                                        SoundEvents.CHORUS_FRUIT_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.0F);
+                            if (entityLiving.randomTeleport(d3, d4, d5, true)) {
+                                level.playSound(null, startX, startY, startZ, SoundEvents.CHORUS_FRUIT_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.0F);// Dźwięk u gracza
+                                entityLiving.playSound(SoundEvents.CHORUS_FRUIT_TELEPORT, 1.0F, 1.0F);
+
                                 entityLiving.resetFallDistance();
                                 break;
                             }
                         }
                     }
-                    return itemstack;
+                    return result;
                 }
             });
 
@@ -106,28 +111,33 @@ public class ModItems {
 
                 @Override
                 public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entityLiving) {
-                    ItemStack itemstack = super.finishUsingItem(stack, level, entityLiving);
+                    ItemStack result = super.finishUsingItem(stack, level, entityLiving);
 
                     if (!level.isClientSide) {
-                        for(int i = 0; i < 8; ++i) {
-                            double d0 = entityLiving.getX() + (entityLiving.getRandom().nextDouble() - 0.5D) * 8.0D;
-                            double d1 = Mth.clamp(entityLiving.getY() + (double)(entityLiving.getRandom().nextInt(8) - 8), (double)level.getMinBuildHeight(), (double)(level.getMinBuildHeight() + ((ServerLevel)level).getLogicalHeight() - 1));
-                            double d2 = entityLiving.getZ() + (entityLiving.getRandom().nextDouble() - 0.5D) * 8.0D;
+                        double startX = entityLiving.getX();
+                        double startY = entityLiving.getY();
+                        double startZ = entityLiving.getZ();
+
+                        for (int i = 0; i < 16; ++i) {
+                            double d3 = entityLiving.getX() + (entityLiving.getRandom().nextDouble() - 0.5D) * 64.0D;
+                            double d4 = Math.min(Math.max(entityLiving.getY() + (double) (entityLiving.getRandom().nextInt(64) - 32),
+                                    (double) level.getMinBuildHeight()), (double) (level.getHeight() - 1 + level.getMinBuildHeight()));
+                            double d5 = entityLiving.getZ() + (entityLiving.getRandom().nextDouble() - 0.5D) * 64.0D;
 
                             if (entityLiving.isPassenger()) {
                                 entityLiving.stopRiding();
                             }
 
-                            if (entityLiving.randomTeleport(d0, d1, d2, true)) {
-                                level.gameEvent(GameEvent.TELEPORT, entityLiving.position(), GameEvent.Context.of(entityLiving));
-                                level.playSound(null, entityLiving.getX(), entityLiving.getY(), entityLiving.getZ(),
-                                        SoundEvents.CHORUS_FRUIT_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.0F);
+                            if (entityLiving.randomTeleport(d3, d4, d5, true)) {
+                                level.playSound(null, startX, startY, startZ, SoundEvents.CHORUS_FRUIT_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.0F);// Dźwięk u gracza
+                                entityLiving.playSound(SoundEvents.CHORUS_FRUIT_TELEPORT, 1.0F, 1.0F);
+
                                 entityLiving.resetFallDistance();
                                 break;
                             }
                         }
                     }
-                    return itemstack;
+                    return result;
                 }
             });
 

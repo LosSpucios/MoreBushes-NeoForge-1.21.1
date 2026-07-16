@@ -75,7 +75,7 @@ public class JuiceItem extends Item {
         // Poprawny sposób pobrania klucza przedmiotu:
         String itemName = BuiltInRegistries.ITEM.getKey(this).getPath();
         if (itemName.contains("chorus_berry_juice")) {
-            tooltip.add(Component.literal("Chorus Effect").withStyle(ChatFormatting.BLUE));
+            tooltip.add(Component.literal("Chorus Effect III").withStyle(ChatFormatting.BLUE));
         }
 
         super.appendHoverText(stack, context, tooltip, flag);
