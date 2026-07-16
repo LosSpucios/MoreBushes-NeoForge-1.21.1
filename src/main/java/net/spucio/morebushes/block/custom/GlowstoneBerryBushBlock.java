@@ -80,10 +80,12 @@ public class GlowstoneBerryBushBlock extends SweetBerryBushBlock {
     public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
         super.entityInside(pState, pLevel, pPos, pEntity);
 
+        // Pobieramy wiek krzaka
+        int age = pState.getValue(AGE);
+
+        // Dodajemy warunek: wiek 2 lub 3
         if (!pLevel.isClientSide && pEntity instanceof LivingEntity livingEntity) {
-            // 25% szansy na tick
-            if (pLevel.random.nextInt(4) == 0) {
-                // MobEffects.GLOWING w 1.21.1 jest poprawnym efektem
+            if ((age == 2 || age == 3) && pLevel.random.nextInt(4) == 0) {
                 livingEntity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 100, 0));
             }
         }

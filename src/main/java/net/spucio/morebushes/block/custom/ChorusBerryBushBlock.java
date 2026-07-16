@@ -79,8 +79,12 @@ public class ChorusBerryBushBlock extends SweetBerryBushBlock {
     public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
         super.entityInside(pState, pLevel, pPos, pEntity);
 
+        // Pobieramy aktualny wiek krzaka
+        int age = pState.getValue(AGE);
+
+        // Dodajemy warunek: teleportuje tylko jeśli wiek to 2 lub 3
         if (!pLevel.isClientSide && pEntity instanceof LivingEntity livingEntity && !(pEntity instanceof Fox)) {
-            if (pLevel.random.nextInt(4) == 0) {
+            if ((age == 2 || age == 3) && pLevel.random.nextInt(4) == 0) {
                 teleportRandomly(livingEntity, pLevel);
             }
         }
