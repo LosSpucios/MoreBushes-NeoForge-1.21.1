@@ -88,7 +88,6 @@ public class LavaBerryBushBlock extends SweetBerryBushBlock {
         int age = pState.getValue(AGE);
 
         if (!pLevel.isClientSide && pEntity instanceof LivingEntity) {
-            // Podpala tylko jeśli krzak ma wiek 2 lub 3
             if (age == 2 || age == 3) {
                 pEntity.igniteForSeconds(3);
             }

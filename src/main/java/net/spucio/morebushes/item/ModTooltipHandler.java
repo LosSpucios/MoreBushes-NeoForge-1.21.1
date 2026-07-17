@@ -44,15 +44,27 @@ public class ModTooltipHandler {
         }
 
         if (event.getItemStack().getItem() == ModItems.MINERSBERRIES.get()) {
-            event.getToolTip().add(1,Component.literal("Haste (0:03)").withStyle(ChatFormatting.BLUE));
+            event.getToolTip().add(1,Component.literal("Haste II (0:03)").withStyle(ChatFormatting.BLUE));
             event.getToolTip().add(2,Component.literal("Night Vision (0:03)").withStyle(ChatFormatting.BLUE));
         }
 
         if (event.getItemStack().getItem() == ModItems.GOLDENBERRIES.get()) {
-            event.getToolTip().add(1,Component.literal("Regeneration (0:10)").withStyle(ChatFormatting.BLUE));
+            event.getToolTip().add(1,Component.literal("Regeneration II (0:10)").withStyle(ChatFormatting.BLUE));
             event.getToolTip().add(2,Component.literal("Resistance (2:30)").withStyle(ChatFormatting.BLUE));
             event.getToolTip().add(3,Component.literal("Fire Resistance (2:39)").withStyle(ChatFormatting.BLUE));
-            event.getToolTip().add(4,Component.literal("Absorption (1:00)").withStyle(ChatFormatting.BLUE));
+            event.getToolTip().add(4,Component.literal("Absorption IV  (1:00)").withStyle(ChatFormatting.BLUE));
+        }
+
+        if (event.getItemStack().getItem() == ModItems.GOLDENBERRYJUICE.get()) {
+            event.getToolTip().set(1,Component.literal("Regeneration II (0:40)").withStyle(ChatFormatting.BLUE));
+            event.getToolTip().set(2,Component.literal("Resistance (10:00)").withStyle(ChatFormatting.BLUE));
+            event.getToolTip().set(3,Component.literal("Fire Resistance (10:00)").withStyle(ChatFormatting.BLUE));
+            event.getToolTip().set(4,Component.literal("Absorption IV (4:00)").withStyle(ChatFormatting.BLUE));
+        }
+
+        if (event.getItemStack().getItem() == ModItems.MINERSBERRYJUICE.get()) {
+            event.getToolTip().set(1,Component.literal("Haste II (0:24)").withStyle(ChatFormatting.BLUE));
+            event.getToolTip().set(2,Component.literal("Night Vision (0:24)").withStyle(ChatFormatting.BLUE));
         }
     }
 }

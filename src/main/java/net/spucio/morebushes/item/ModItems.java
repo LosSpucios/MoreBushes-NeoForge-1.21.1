@@ -81,25 +81,25 @@ public class ModItems {
             });
 
     public static final DeferredItem<Item> SWEETBERRYJUICE = ITEMS.register("sweet_berry_juice",
-            () -> new JuiceItem(new Item.Properties().stacksTo(16).food(new FoodProperties.Builder().nutrition(8).saturationModifier(0.1F).effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 480), 1.0F).alwaysEdible().build())));
+            () -> new JuiceItem(new Item.Properties().stacksTo(16).food(new FoodProperties.Builder().nutrition(8).saturationModifier(6F).effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 480), 1.0F).alwaysEdible().build())));
 
     public static final DeferredItem<Item> BLUEBERRYJUICE = ITEMS.register("blueberry_juice",
-            () -> new JuiceItem(new Item.Properties().stacksTo(16).food(new FoodProperties.Builder().nutrition(8).saturationModifier(0.1F).effect(new MobEffectInstance(MobEffects.WATER_BREATHING, 480), 1.0F).alwaysEdible().build())));
+            () -> new JuiceItem(new Item.Properties().stacksTo(16).food(new FoodProperties.Builder().nutrition(8).saturationModifier(6F).effect(new MobEffectInstance(MobEffects.WATER_BREATHING, 480), 1.0F).alwaysEdible().build())));
 
     public static final DeferredItem<Item> GOLDENBERRYJUICE = ITEMS.register("golden_berry_juice",
-            () -> new JuiceItem(new Item.Properties().stacksTo(16).food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.25F).effect(new MobEffectInstance(MobEffects.REGENERATION, 800, 1), 1.0F).effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 12000, 0), 1.0F).effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 12000, 0), 1.0F).effect(new MobEffectInstance(MobEffects.ABSORPTION, 4800, 3), 1.0F).alwaysEdible().build())));
+            () -> new JuiceItem(new Item.Properties().stacksTo(16).food(new FoodProperties.Builder().nutrition(4).saturationModifier(8F).effect(new MobEffectInstance(MobEffects.REGENERATION, 800, 1), 1.0F).effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 12000, 0), 1.0F).effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 12000, 0), 1.0F).effect(new MobEffectInstance(MobEffects.ABSORPTION, 4800, 3), 1.0F).alwaysEdible().build())));
 
     public static final DeferredItem<Item> LAVABERRYJUICE = ITEMS.register("lava_berry_juice",
-            () -> new JuiceItem(new Item.Properties().stacksTo(16).food(new FoodProperties.Builder().nutrition(8).saturationModifier(0.1F).effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 480), 1.0F).alwaysEdible().build())));
+            () -> new JuiceItem(new Item.Properties().stacksTo(16).food(new FoodProperties.Builder().nutrition(8).saturationModifier(6F).effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 480), 1.0F).alwaysEdible().build())));
 
     public static final DeferredItem<Item> GLOWSTONEBERRYJUICE = ITEMS.register("glowstone_berry_juice",
-            () -> new JuiceItem(new Item.Properties().stacksTo(16).food(new FoodProperties.Builder().nutrition(8).saturationModifier(0.1F).effect(new MobEffectInstance(MobEffects.GLOWING, 480), 1.0F).effect(new MobEffectInstance(MobEffects.REGENERATION, 480), 1.0F).alwaysEdible().build())));
+            () -> new JuiceItem(new Item.Properties().stacksTo(16).food(new FoodProperties.Builder().nutrition(8).saturationModifier(6F).effect(new MobEffectInstance(MobEffects.GLOWING, 480), 1.0F).effect(new MobEffectInstance(MobEffects.REGENERATION, 480), 1.0F).alwaysEdible().build())));
 
     public static final DeferredItem<Item> MINERSBERRYJUICE = ITEMS.register("miners_berry_juice",
-            () -> new JuiceItem(new Item.Properties().stacksTo(16).food(new FoodProperties.Builder().nutrition(8).saturationModifier(0.1F).effect(new MobEffectInstance(MobEffects.DIG_SPEED, 480), 1.0F).effect(new MobEffectInstance(MobEffects.NIGHT_VISION, 480), 1.0F).alwaysEdible().build())));
+            () -> new JuiceItem(new Item.Properties().stacksTo(16).food(new FoodProperties.Builder().nutrition(8).saturationModifier(6F).effect(new MobEffectInstance(MobEffects.DIG_SPEED, 480, 1), 1.0F).effect(new MobEffectInstance(MobEffects.NIGHT_VISION, 480), 1.0F).alwaysEdible().build())));
 
     public static final DeferredItem<Item> SHULKERBERRYJUICE = ITEMS.register("shulker_berry_juice",
-            () -> new JuiceItem(new Item.Properties().stacksTo(16).food(new FoodProperties.Builder().nutrition(8).saturationModifier(0.1F).effect(new MobEffectInstance(MobEffects.LEVITATION, 480), 1.0F).alwaysEdible().build())));
+            () -> new JuiceItem(new Item.Properties().stacksTo(16).food(new FoodProperties.Builder().nutrition(8).saturationModifier(6F).effect(new MobEffectInstance(MobEffects.LEVITATION, 480), 1.0F).alwaysEdible().build())));
 
     public static final DeferredItem<Item> CHORUSBERRYJUICE = ITEMS.register("chorus_berry_juice",
             () -> new JuiceItem(new Item.Properties().stacksTo(16)

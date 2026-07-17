@@ -79,7 +79,6 @@ public class ShulkerBerryBushBlock extends SweetBerryBushBlock {
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack pStack, BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-        // Mączka kostna jest obsługiwana w super.useItemOn
         return super.useItemOn(pStack, pState, pLevel, pPos, pPlayer, pHand, pHit);
     }
 
@@ -87,10 +86,8 @@ public class ShulkerBerryBushBlock extends SweetBerryBushBlock {
     public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
         super.entityInside(pState, pLevel, pPos, pEntity);
 
-        // Pobieramy aktualny wiek krzaka
         int age = pState.getValue(AGE);
 
-        // Dodajemy warunek: wiek 2 lub 3 oraz szansa 25%
         if (!pLevel.isClientSide && pEntity instanceof LivingEntity livingEntity) {
             if ((age == 2 || age == 3) && pLevel.random.nextInt(4) == 0) {
                 livingEntity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 60));
